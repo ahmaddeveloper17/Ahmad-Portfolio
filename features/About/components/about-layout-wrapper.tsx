@@ -20,7 +20,7 @@ export default function AboutLayoutWrapper({
 
   if (loading)
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center ">
+      <div className="fixed inset-0 z-9999 flex items-center justify-center ">
         <RevealLoader
           text="Know About Me!"
           staggerOrder="left-to-right"

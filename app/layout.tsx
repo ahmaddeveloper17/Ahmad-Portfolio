@@ -24,7 +24,7 @@ export default function HomePageLayout({
       <body
         className={`${nunito.variable} ${nunito.variable} antialiased relative`}
       >
-        <div className="absolute z-9999 left-0 right-0 top-5">
+        <div className="absolute z-9998 left-0 right-0 top-5">
           <Navbar />
         </div>
 

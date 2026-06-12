@@ -18,11 +18,19 @@ const Navbar: React.FC = () => {
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
     { name: "Portfolio", url: "/portfolio" },
-    { name: "Contact", url: "/contact" },
+    { name: "Experience", url: "/experience" },
   ];
 
   return (
-    <nav className="relative flex items-center lg:w-max border mx-auto md:justify-center justify-between border-slate-700  px-8 py-4 text-white bg-black rounded-full text-sm hover:shadow-[0px_0px_22px_4px] shadow-[0px_0px_15px_1px] transition-all duration-500 ">
+    <nav
+      className="sticky top-2  mx-auto mt-2 flex items-center justify-between 
+lg:w-max md:justify-center
+border border-slate-700 px-10 py-4 text-white
+bg-white/5 backdrop-blur-md rounded-full
+text-sm
+hover:shadow-[0px_0px_22px_4px] shadow-[0px_0px_15px_1px]
+transition-all duration-500"
+    >
       {/* Logo */}
       <Link href="/" className="cursor-pointer">
         <img src="/favicon.svg" alt="Logo" className=" w-11" />
@@ -50,9 +58,11 @@ const Navbar: React.FC = () => {
       </div>
       {/* Desktop Buttons */}
       <div className="hidden ml-14 md:flex items-center gap-4">
-        <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer">
-          Contact
-        </button>
+        <Link href="/contact">
+          <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer">
+            Contact
+          </button>
+        </Link>
 
         <button className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300 cursor-pointer">
           Hire Me
@@ -92,10 +102,11 @@ const Navbar: React.FC = () => {
               {item.name}
             </Link>
           ))}
-
-          <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
-            Contact
-          </button>
+          <Link href="/contact">
+            <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
+              Contact
+            </button>
+          </Link>
 
           <button className="bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
             Hire Me

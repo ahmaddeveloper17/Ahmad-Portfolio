@@ -27,7 +27,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       style={{ textDecoration: "none" }}
     >
       {/* Card body */}
-      <div className="card-inner relative overflow-hidden rounded-2xl bg-[#0F0F1A] border border-white/6">
+
+      <div className="card-inner relative overflow-hidden rounded-2xl  bg-white/5 backdrop-blur-md border border-white/6">
         {/* Thumbnail */}
         <div className="relative h-52 overflow-hidden">
           <Image

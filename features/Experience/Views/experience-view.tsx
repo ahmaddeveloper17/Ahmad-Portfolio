@@ -1,0 +1,105 @@
+"use client";
+
+import { useRef } from "react";
+import { experiences } from "../data/experience";
+
+import Particles from "@/features/Portfolio/components/Particles";
+import ExperienceCard from "../components/ExperienceCard";
+import { TracingBeamLine } from "../components/TracingBeamLine";
+import { FollowerPointerCard } from "@/components/UI/following-pointer";
+
+export default function ExperiencePageView() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  return (
+    <main className=" w-screen h-screen ">
+      <div className="fixed inset-0 -z-10 opacity-60 pointer-events-none">
+        <Particles
+          particleColors={["#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          alphaParticles={false}
+          disableRotation={false}
+          pixelRatio={1}
+        />
+      </div>
+      <section className="relative w-full py-24 xl:max-w-7xl mx-auto">
+        {/* header */}
+        <div className="mb-20 flex  lg:mt-20 flex-col items-center text-center">
+          <div className="mb-4 flex items-center gap-2.5">
+            <div
+              className="h-px w-8"
+              style={{ background: "linear-gradient(90deg,#7C3AED,#06B6D4)" }}
+            />
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600">
+              Career
+            </span>
+            <div
+              className="h-px w-8"
+              style={{ background: "linear-gradient(90deg,#06B6D4,#7C3AED)" }}
+            />
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-white lg:text-5xl">
+            Work Experience
+          </h2>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
+            A timeline of the roles and companies that shaped how I build.
+          </p>
+        </div>
+
+        {/* timeline */}
+        <div ref={containerRef} className="relative">
+          {/* SVG snake beam — rendered behind cards */}
+          <TracingBeamLine
+            containerRef={containerRef}
+            cardRefs={cardRefs}
+            count={experiences.length}
+          />
+
+          <div className="flex flex-col gap-12 lg:gap-20">
+            {experiences.map((exp, i) => {
+              const side: "left" | "right" = i % 2 === 0 ? "left" : "right";
+              return (
+                <div
+                  key={exp.id}
+                  className={`flex flex-col lg:flex-row ${side === "right" ? "lg:justify-end" : ""}`}
+                >
+                  <div
+                    className="w-full lg:w-[50%]"
+                    ref={(el) => {
+                      cardRefs.current[i] = el;
+                    }}
+                  >
+                    <FollowerPointerCard title={exp.company}>
+                      <ExperienceCard exp={exp} side={side} />
+                    </FollowerPointerCard>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <style>{`
+        @keyframes shimmer {
+          0%   { background-position: 0% 0; }
+          100% { background-position: 200% 0; }
+        }
+        .exp-card {
+          opacity: 0;
+          transform: translateX(var(--tx, -28px));
+          transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+        .exp-card[data-side="right"] { --tx: 28px; }
+        .exp-card.exp-in {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      `}</style>
+      </section>
+    </main>
+  );
+}

@@ -32,7 +32,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   const nextProject = projects[(currentIndex + 1) % projects.length];
 
   return (
-    <main className="relative w-screen min-h-screen overflow-auto ">
+    <main className="relative w-screen h-screen overflow-auto ">
       {/* Aurora background */}
       <div className="fixed inset-0 -z-10 opacity-50 pointer-events-none">
         <Particles
@@ -135,7 +135,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             ].map(({ icon: Icon, label, value }) => (
               <div
                 key={label}
-                className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-5 transition-colors hover:border-violet-500/25"
+                className="group relative overflow-hidden rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-5 transition-colors hover:border-violet-500/25"
               >
                 <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05]">
                   <Icon size={15} className="text-violet-400" />
@@ -174,7 +174,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.gallery.map((image, i) => (
               <div
                 key={image}
-                className={`group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0F0F1A] ${
+                className={`group relative overflow-hidden rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md ${
                   i === 0 ? "md:col-span-2" : ""
                 }`}
               >
@@ -218,7 +218,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.features.map((feature, i) => (
               <div
                 key={feature}
-                className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-6 transition-all hover:border-violet-500/25"
+                className="group relative overflow-hidden rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-6 transition-all hover:border-violet-500/25"
               >
                 <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/20">
                   <Zap size={15} className="text-violet-400" />
@@ -236,7 +236,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <section className="py-16">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Challenges */}
-            <div className="rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-8">
+            <div className="rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-8">
               <div className="mb-2 flex items-center gap-2">
                 <div className="h-[2px] w-5 rounded-full bg-gradient-to-r from-violet-600 to-transparent" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-600">
@@ -259,7 +259,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             </div>
 
             {/* Solutions */}
-            <div className="rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-8">
+            <div className="rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-8">
               <div className="mb-2 flex items-center gap-2">
                 <div className="h-[2px] w-5 rounded-full bg-gradient-to-r from-cyan-500 to-transparent" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-600">
@@ -296,7 +296,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.outcomes.map((outcome, i) => (
               <div
                 key={outcome}
-                className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-7"
+                className="group relative overflow-hidden rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-7"
               >
                 {/* gradient top bar, distinct per column */}
                 <div
@@ -324,7 +324,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* ── 9. CTA strip ─────────────────────────────────────────────────── */}
         {(project.liveUrl || project.githubUrl) && (
           <section className="py-8">
-            <div className="flex flex-wrap gap-3 rounded-2xl border border-white/[0.07] bg-[#0F0F1A] p-6">
+            <div className="flex flex-wrap gap-3 rounded-2xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-6">
               <p className="w-full text-xs font-semibold uppercase tracking-[0.15em] text-zinc-600 mb-1">
                 Links
               </p>
@@ -361,7 +361,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <section className="py-16 pb-24">
           <Link
             href={`/portfolio/${nextProject.slug}`}
-            className="group relative block overflow-hidden rounded-3xl border border-white/[0.07] bg-[#0F0F1A] p-10 transition-all hover:border-violet-500/30"
+            className="group relative block overflow-hidden rounded-3xl border border-white/[0.07]  bg-white/5 backdrop-blur-md p-10 transition-all hover:border-violet-500/30"
           >
             {/* animated accent bar */}
             <div

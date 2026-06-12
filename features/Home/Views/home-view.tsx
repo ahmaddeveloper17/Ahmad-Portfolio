@@ -78,7 +78,7 @@ export default function HomePageView() {
   ];
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden ">
+    <div className="relative w-screen h-screen overflow-auto ">
       {/* Background Lines with full interaction */}
       <div className="fixed inset-0 z-30 opacity-80 pointer-events-none">
         <LightRays
