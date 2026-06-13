@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Nunito } from "next/font/google";
+import { Black_Ops_One, Nunito, Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/UI/Navbar";
 import SplashCursor from "@/components/SplashCursor";
 
 const nunito = Nunito({
   variable: "--font-nunito",
+  subsets: ["latin"],
+});
+const ssn = Stack_Sans_Notch({
+  variable: "--font-stack-sans-notch",
   subsets: ["latin"],
 });
 
@@ -22,7 +26,7 @@ export default function HomePageLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${nunito.variable} antialiased relative`}
+        className={`${nunito.variable} ${ssn.variable} antialiased relative`}
       >
         <div className="absolute z-9998 left-0 right-0 top-5">
           <Navbar />

@@ -153,13 +153,13 @@ const RevealLoader = ({
         <div className="overflow-hidden">
           <p
             className={cn(
-              "name-text flex leading-none tracking-tighter", // Removed mix-blend-difference
+              "name-text flex font-[Stack_Sans_Notch]  leading-none tracking-tighter", // Removed mix-blend-difference
               anton.className,
             )}
             style={{
               fontSize: textSize,
               color: textColor,
-              fontWeight: "200",
+              fontWeight: "700",
               fontFeatureSettings: "normal",
               fontVariationSettings: "normal",
               textTransform: "uppercase",
@@ -168,7 +168,10 @@ const RevealLoader = ({
             }}
           >
             {text.split("").map((char, index) => (
-              <span key={index} className="inline-block translate-y-full">
+              <span
+                key={index}
+                className="inline-block translate-y-full font-[Stack_Sans_Notch]"
+              >
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}

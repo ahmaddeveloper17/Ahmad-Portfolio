@@ -114,7 +114,7 @@ const SocialFlipNode = ({
         {/* Back - Icon */}
         <div
           className={cn(
-            "absolute inset-0 flex items-center justify-center rounded-lg bg-black text-lg text-white dark:bg-white dark:text-black",
+            "absolute inset-0 flex items-center justify-center rounded-lg bg-primary text-lg text-black dark:bg-white dark:text-white",
             backClassName,
           )}
           style={{

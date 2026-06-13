@@ -12,6 +12,7 @@ import {
 import { TechsLogoLoop } from "../components/LogoLoop";
 import SoftAurora from "../components/SoftAurora";
 import MoreAboutMe from "../components/MoreAboutMe";
+import HeadingTitle from "@/components/Heading";
 
 const dockItems = [
   { icon: <FaGithub size={18} />, label: "Github", onClick: () => {} },
@@ -43,36 +44,75 @@ export default function AboutPageView() {
           mouseInfluence={0.25}
         />
       </div>
+      <div className="mb-20 flex lg:mt-25 xl:mt-40 flex-col items-center  text-center">
+        <HeadingTitle title="About Me" lineWidthClassName="w-32" />
+
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+          A brief introduction about myself, my background, and what drives me
+          as
+        </p>
+      </div>
 
       {/* MAIN CONTENT */}
-      <main className="relative z-10 flex flex-col max-w-6xl mx-auto">
-        <section className="w-full flex justify-center px-4 pt-28 lg:pt-40 ">
+      <main className="relative z-10 flex flex-col max-w-6xl xl:max-w-7xl mx-auto">
+        <section className="w-full flex justify-center px-4  ">
           <div className="w-full  flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
             {/* LEFT CONTENT */}
             <div className="flex flex-col gap-4 max-w-xl">
-              <h1 className="text-white text-5xl py-6 tracking-tight">
-                About Me
-              </h1>
+              <HeadingTitle title="Ahmad Mujtaba" />
               <p className="text-white font-semibold text-lg">
                 MERN Developer | DevOps | Next JS | OpenAI | SaaS
               </p>
 
-              <p className="text-white text-base">
+              <p className=" text-muted-foreground text-base">
                 A full-stack developer focusing on the MERN stack, specializing
                 in building user-centric and performant web applications.
               </p>
 
-              <p className="text-white text-base">
+              <p className="text-muted-foreground text-base">
                 3+ years experience building full-stack MERN applications with
                 seamless frontend-backend integration.
               </p>
 
               {/* BUTTONS */}
-              <div className="flex gap-4 mt-4">
-                <button className="px-6 py-2 bg-white text-black rounded-md">
+              <div className="flex flex-wrap gap-4 mt-4">
+                {/* Primary CTA */}
+                <button
+                  className="
+      px-5 py-2
+      rounded-lg
+      font-medium
+      text-[#0A0F1C]
+      transition-all
+      duration-300
+      hover:scale-105
+      
+    "
+                  style={{
+                    background:
+                      "linear-gradient(135deg,#66FCF1 0%, #45A29E 100%)",
+                  }}
+                >
                   Contact Me
                 </button>
-                <button className="px-6 py-2 border border-white text-white rounded-md">
+
+                {/* Secondary CTA */}
+                <button
+                  className="
+         px-5 py-2
+      rounded-lg
+      font-medium
+      border
+      border-[#66FCF1]/50
+      text-[#66FCF1]
+      bg-transparent
+      transition-all
+      duration-300
+      hover:bg-[#66FCF1]/10
+      hover:border-[#66FCF1]
+     
+    "
+                >
                   Resume
                 </button>
               </div>
@@ -82,7 +122,7 @@ export default function AboutPageView() {
                 {dockItems.map((item, i) => (
                   <div
                     key={i}
-                    className="bg-white text-black size-10 flex items-center justify-center rounded-md cursor-pointer hover:-translate-y-1 transition"
+                    className="bg-white hover:bg-secondary text-black size-10 flex items-center justify-center rounded-md cursor-pointer hover:-translate-y-1 transition-all duration-500"
                   >
                     {item.icon}
                   </div>
@@ -108,14 +148,12 @@ export default function AboutPageView() {
             </div>
           </div>
         </section>
-        <section className="mt-35">
+        <section className="mt-20">
           <MoreAboutMe />
         </section>
 
-        <section className="mt-10">
-          <h1 className="text-white text-5xl py-13 tracking-tight">
-            Technologies
-          </h1>
+        <section className="mt-20">
+          <HeadingTitle title="Technologies" lineWidthClassName="w-35" />
           <TechsLogoLoop />
         </section>
       </main>

@@ -29,7 +29,7 @@ export function Field({
         className="relative rounded-xl transition-all duration-300"
         style={{
           background: focused
-            ? "linear-gradient(135deg,#7C3AED,#06B6D4)"
+            ? "linear-gradient(135deg,#66FCF1,#45A29E)"
             : "rgba(255,255,255,0.07)",
           padding: "1px",
         }}
@@ -62,7 +62,7 @@ export function Field({
           {/* floating label */}
           <label
             htmlFor={id}
-            className="pointer-events-none absolute left-4 transition-all duration-200"
+            className="pointer-events-none absolute left-4 transition-all duration-200 text-secondary"
             style={{
               top: lifted ? "8px" : textarea ? "18px" : "50%",
               transform: lifted || textarea ? "none" : "translateY(-50%)",
@@ -70,7 +70,7 @@ export function Field({
               fontWeight: lifted ? 600 : 400,
               letterSpacing: lifted ? "0.1em" : "0",
               textTransform: lifted ? "uppercase" : "none",
-              color: focused ? "#a78bfa" : lifted ? "#52525b" : "#52525b",
+              color: focused ? "#66FCF1" : lifted ? "#52525b" : "#52525b",
             }}
           >
             {label}

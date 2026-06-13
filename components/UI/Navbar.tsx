@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
       className="sticky top-2  mx-auto mt-2 flex items-center justify-between 
 lg:w-max md:justify-center
 border border-slate-700 px-10 py-4 text-white
-bg-white/5 backdrop-blur-md rounded-full
+bg-secondary/10 backdrop-blur-md rounded-full
 text-sm
-hover:shadow-[0px_0px_22px_4px] shadow-[0px_0px_15px_1px]
+hover:shadow-[0px_0px_22px_2px] shadow-[0px_0px_15px_1px]
 transition-all duration-500"
     >
       {/* Logo */}
@@ -44,27 +44,24 @@ transition-all duration-500"
             href={item.url}
             className="relative overflow-hidden h-6 group"
           >
-            {/* Default Text */}
             <span className="block transition-transform duration-300 group-hover:-translate-y-full">
               {item.name}
             </span>
 
-            {/* Hover Text */}
             <span className="block absolute  left-0 transition-transform duration-300 group-hover:-translate-y-full">
               {item.name}
             </span>
           </Link>
         ))}
       </div>
-      {/* Desktop Buttons */}
       <div className="hidden ml-14 md:flex items-center gap-4">
         <Link href="/contact">
-          <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer">
+          <button className="border border-secondary hover:bg-secondary/50 px-4 py-2 rounded-full text-sm font-medium transition duration-500 cursor-pointer">
             Contact
           </button>
         </Link>
 
-        <button className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300 cursor-pointer">
+        <button className="bg-primary hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-primary/50  text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-secondary-100 transition duration-300 cursor-pointer">
           Hire Me
         </button>
       </div>

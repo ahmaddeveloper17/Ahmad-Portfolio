@@ -52,10 +52,10 @@ export default function ExperienceCard({
               <img
                 src={exp.logo}
                 alt={exp.company}
-                className="h-10 w-10 rounded-xl border border-white/[0.08] object-cover bg-white/[0.04]"
+                className="h-10 w-10 rounded-xl border border-white/8 object-cover bg-primary/4"
               />
             ) : (
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-ring/[0.08] bg-primary/4">
                 <Briefcase size={16} className="text-violet-400" />
               </div>
             )}
@@ -77,19 +77,19 @@ export default function ExperienceCard({
 
         {/* meta */}
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5">
-          <span className="flex items-center gap-1.5 text-xs text-zinc-500">
-            <CalendarDays size={12} className="text-zinc-600" />
+          <span className="flex items-center gap-1.5 text-base text-zinc-500">
+            <CalendarDays size={14} className="text-zinc-600" />
             {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
-            <span className="ml-1 rounded-md bg-white/[0.05] px-1.5 py-0.5 text-[10px] text-zinc-500">
-              {getDuration(exp.startDate, exp.endDate)}
-            </span>
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-zinc-500">
-            <MapPin size={12} className="text-zinc-600" />
+          <span className="ml-1 rounded-md bg-white/[0.05] px-1.5 py-0.5  text-muted-foreground text-sm">
+            {getDuration(exp.startDate, exp.endDate)}
+          </span>
+          <span className="flex items-center gap-1.5 text-base text-zinc-500">
+            <MapPin size={14} className="text-zinc-600" />
             {exp.location}
           </span>
           {exp.current && (
-            <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold text-emerald-400">
+            <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-semibold text-emerald-400">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -100,29 +100,29 @@ export default function ExperienceCard({
         </div>
 
         {/* description */}
-        <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           {exp.description}
         </p>
 
-        {/* achievements */}
         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
           {exp.achievements.map((a) => (
             <li key={a} className="flex items-start gap-2">
               <CheckCircle2
-                size={13}
-                className="mt-0.5 shrink-0 text-violet-500"
+                size={15}
+                className="mt-0.5 shrink-0 text-secondary"
               />
-              <span className="text-xs leading-relaxed text-zinc-400">{a}</span>
+              <span className="text-xs leading-relaxed text-muted-foreground ">
+                {a}
+              </span>
             </li>
           ))}
         </ul>
 
-        {/* tech */}
-        <div className="mt-5 flex flex-wrap gap-2 border-t border-white/[0.05] pt-5">
+        <div className="mt-5 flex flex-wrap gap-2 border-t border-ring/[0.5] pt-5">
           {exp.technologies.map((t) => (
             <span
               key={t}
-              className="rounded-lg border border-white/[0.07] bg-white/[0.03] px-2.5 py-1 text-[11px] font-medium text-zinc-400 transition-colors hover:border-violet-500/30 hover:text-zinc-300"
+              className="rounded-lg border border-ring/[0.07] bg-primary/[0.03] px-2.5 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:border-ring-500/30 hover:text-zinc-300"
             >
               {t}
             </span>

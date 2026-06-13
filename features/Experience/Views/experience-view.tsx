@@ -7,6 +7,7 @@ import Particles from "@/features/Portfolio/components/Particles";
 import ExperienceCard from "../components/ExperienceCard";
 import { TracingBeamLine } from "../components/TracingBeamLine";
 import { FollowerPointerCard } from "@/components/UI/following-pointer";
+import HeadingTitle from "@/components/Heading";
 
 export default function ExperiencePageView() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,25 +27,11 @@ export default function ExperiencePageView() {
           pixelRatio={1}
         />
       </div>
-      <section className="relative w-full py-24 xl:max-w-7xl mx-auto">
+      <section className="relative w-full py-24 max-w-6xl xl:max-w-7xl mx-auto">
         {/* header */}
         <div className="mb-20 flex  lg:mt-20 flex-col items-center text-center">
-          <div className="mb-4 flex items-center gap-2.5">
-            <div
-              className="h-px w-8"
-              style={{ background: "linear-gradient(90deg,#7C3AED,#06B6D4)" }}
-            />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600">
-              Career
-            </span>
-            <div
-              className="h-px w-8"
-              style={{ background: "linear-gradient(90deg,#06B6D4,#7C3AED)" }}
-            />
-          </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white lg:text-5xl">
-            Work Experience
-          </h2>
+          <HeadingTitle title="Work Experience" lineWidthClassName="w-38" />
+
           <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
             A timeline of the roles and companies that shaped how I build.
           </p>

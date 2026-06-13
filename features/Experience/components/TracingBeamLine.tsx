@@ -135,12 +135,12 @@ export function TracingBeamLine({
     >
       <defs>
         <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#7C3AED" />
-          <stop offset="100%" stopColor="#06B6D4" />
+          <stop offset="0%" stopColor="#66FCF1" />
+          <stop offset="100%" stopColor="#45A29E" />
         </linearGradient>
-        {/* glow filter */}
+
         <filter id="glow">
-          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feGaussianBlur stdDeviation="4" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
@@ -148,43 +148,40 @@ export function TracingBeamLine({
         </filter>
       </defs>
 
-      {/* dim track */}
       <path
         d={pathD}
-        stroke="rgba(255,255,255,0.05)"
+        stroke="rgba(102,252,241,0.08)"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* live fill */}
       <path
         ref={pathRef}
         d={pathD}
         stroke="url(#beamGrad)"
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         filter="url(#glow)"
         style={{ transition: "stroke-dashoffset 60ms linear" }}
       />
 
-      {/* travelling dot */}
       <circle
         ref={dotRef}
         r="5"
-        fill="#7C3AED"
+        fill="#66FCF1"
         filter="url(#glow)"
         style={{ opacity: 0, transition: "opacity 0.2s" }}
       />
-      {/* outer ring of dot */}
+
       <circle
-        ref={dotRef}
-        r="9"
+        r="10"
         fill="none"
-        stroke="#7C3AED"
+        stroke="#66FCF1"
         strokeWidth="1"
-        strokeOpacity="0.4"
+        strokeOpacity="0.35"
+        filter="url(#glow)"
         style={{ opacity: 0 }}
       />
     </svg>

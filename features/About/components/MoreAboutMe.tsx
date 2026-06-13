@@ -29,22 +29,22 @@ export default function MoreAboutMe() {
       {stats.map((item, i) => (
         <div
           key={i}
-          className="
+          className=" cursor-pointer
             relative group
-            bg-white/5 backdrop-blur-md
-            border border-white/10
+            bg-secondary/5 backdrop-blur-md
+            border border-ring/30
             rounded-xl
             p-5
             text-center
-            hover:border-white/30
+            hover:border-ring/50
             transition-all duration-300
           "
         >
           {/* glow effect */}
-          <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 blur-xl"></div>
+          <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-primary/50 blur-xl"></div>
 
           <div className="relative z-10">
-            <div className="text-3xl font-bold text-white flex items-center justify-center gap-1">
+            <div className="text-3xl font-bold text-white flex items-center justify-center ">
               <CountUp
                 from={0}
                 to={item.value}

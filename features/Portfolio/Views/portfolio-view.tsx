@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Particles from "@/features/Portfolio/components/Particles";
 import { FilterDropdown } from "../components/FilterDropdown";
 import { FollowerPointerCard } from "@/components/UI/following-pointer";
+import HeadingTitle from "@/components/Heading";
 
 const CATEGORIES = [...new Set(projects.map((p) => p.category))].sort();
 const YEARS = [...new Set(projects.map((p) => p.completionDate))].sort(
@@ -84,9 +85,17 @@ export default function PortfolioView() {
         />
       </div>
 
-      <div className="absolute lg:pt-25 xl:pt-40 inset-0 z-50 flex flex-col items-start gap-6 mx-auto max-w-72.5 sd:max-w-[370px] 540:max-w-[480px] sm:max-w-135 md:max-w-175 lg:max-w-225 xl:max-w-300">
+      <div className="mb-20 flex mt-20  lg:mt-40 flex-col items-center text-center">
+        <HeadingTitle title="Projects" lineWidthClassName="w-32" />
+
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
+          A List of my personal and professional projects, showcasing my skills
+          and experience in various domains.
+        </p>
+      </div>
+      <div className=" inset-0 z-50 flex flex-col items-start gap-6 relative w-full max-w-6xl xl:max-w-7xl mx-auto">
         <div className="w-full flex justify-between items-center">
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-2 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 border border-white/8">
                 <SlidersHorizontal size={13} className="text-zinc-400" />
@@ -167,10 +176,10 @@ export default function PortfolioView() {
             </button>
           </div>
         </div>
-        <div className=" my-3">
+        <div className=" my-1">
           {/* Active filter chips */}
           {hasFilters && (
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className=" flex flex-wrap gap-2">
               {filters.categories.map((c) => (
                 <Badge
                   key={c}

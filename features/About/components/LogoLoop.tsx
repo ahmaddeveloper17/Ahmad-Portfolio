@@ -23,7 +23,7 @@ const techLogos = [
 
 export function TechsLogoLoop() {
   return (
-    <div className=" flex flex-col gap-6">
+    <div className=" flex flex-col gap-6 mt-15">
       <LogoLoop
         logos={techLogos}
         speed={100}

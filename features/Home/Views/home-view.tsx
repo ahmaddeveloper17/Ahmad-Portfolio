@@ -78,7 +78,7 @@ export default function HomePageView() {
   ];
 
   return (
-    <div className="relative w-screen h-screen overflow-auto ">
+    <div className="relative w-screen h-screen overflow-x-hidden ">
       {/* Background Lines with full interaction */}
       <div className="fixed inset-0 z-30 opacity-80 pointer-events-none">
         <LightRays
@@ -109,7 +109,7 @@ export default function HomePageView() {
       </div>
 
       {/* Centered Text */}
-      <div className="absolute lg:pt-16 inset-0 z-999 flex flex-col items-center justify-center gap-4 pointer-events-none">
+      <div className=" lg:mt-30 xl:mt-40 inset-0 z-999 flex flex-col items-center justify-center gap-4 pointer-events-none">
         <SplitText
           text="I'm, Ahmad!"
           className="text-3xl md:text-5xl  text-white text-center"
@@ -124,7 +124,7 @@ export default function HomePageView() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-        <div className=" text-white">
+        <div className=" text-white font-[Stack_Sans_Notch] ">
           <TrueFocus
             sentence="Full Stack Developer"
             manualMode={false}
