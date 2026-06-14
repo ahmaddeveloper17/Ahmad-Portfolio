@@ -2,238 +2,289 @@ import { Project } from "@/Types/project.type";
 
 export const projects: Project[] = [
   {
-    id: "1",
-    slug: "ai-social-media-scheduler",
-
-    title: "AI Social Media Scheduler",
-
-    tagline: "Manage and automate social media publishing with AI.",
-
+    id: "2",
+    slug: "frenzone",
+    title: "Frenzone",
+    tagline: "Social/community platform for connecting users.",
     shortDescription:
-      "Multi-platform social media scheduling platform with AI-powered content generation.",
-
+      "A modern social networking platform designed to connect users through interests and communities.",
     overview:
-      "A complete social media management platform allowing users to create, schedule, and manage content across multiple social channels.",
-
-    thumbnail: "/portfolio/aisocial.png",
-
-    coverImage: "/portfolio/aisocial.png",
-
-    gallery: [
-      "/portfolio/aisocial.png",
-      "/projects/social/2.webp",
-      "/projects/social/3.webp",
-    ],
-
-    category: "AI Application",
-
+      "Frenzone is a social engagement platform where users can create profiles, connect with others, and interact through posts and communities.",
+    thumbnail: "/portfolio/frenzone.png",
+    coverImage: "/portfolio/frenzone.png",
+    gallery: ["/portfolio/frenzone.png"],
+    category: "For Brands",
     featured: true,
-
-    completionDate: "2026",
-
-    duration: "3 Months",
-
+    completionDate: "2025",
+    duration: "2 Months",
     role: "Full Stack Developer",
-
     technologies: [
       "Next.js",
       "TypeScript",
-      "Clerk",
-      "Redux Toolkit",
-      "OpenAI",
+      "MongoDB",
+      "Express.js",
       "Tailwind CSS",
     ],
     stack: "Full Stack",
     features: [
-      "AI Content Generation",
-      "Post Scheduling",
-      "Calendar View",
-      "Kanban Board",
-      "Multi Platform Publishing",
-      "Analytics Dashboard",
+      "User Profiles",
+      "Posts & Comments",
+      "Friend System",
+      "Real-time Notifications",
     ],
-
-    challenges: [
-      "Managing multiple social APIs",
-      "Content scheduling reliability",
-      "AI integration",
-    ],
-
-    solutions: [
-      "Reusable API architecture",
-      "Queue-based scheduling",
-      "OpenAI-powered workflows",
-    ],
-
-    outcomes: [
-      "Reduced manual posting effort",
-      "Improved content management workflow",
-    ],
-
+    challenges: ["Scalable social interactions", "Real-time updates"],
+    solutions: ["Optimized MongoDB schema design", "WebSocket integration"],
+    outcomes: ["Improved user engagement", "Smooth social interaction flow"],
     liveUrl: "",
     githubUrl: "",
-
-    seoTitle: "AI Social Media Scheduler",
-    seoDescription: "AI-powered social media management platform.",
-  },
-
-  {
-    id: "2",
-
-    slug: "mern-tic-tac-toe",
-
-    title: "Advanced MERN Tic Tac Toe",
-
-    tagline: "Real-time multiplayer gaming experience.",
-
-    shortDescription:
-      "Feature-rich multiplayer Tic Tac Toe application built using MERN stack.",
-
-    overview:
-      "Interactive gaming platform supporting multiplayer matches, leaderboards, authentication, and game history.",
-
-    thumbnail: "/projects/tictactoe/thumb.webp",
-
-    coverImage: "/projects/tictactoe/cover.webp",
-
-    gallery: [],
-
-    category: "Web Application",
-
-    featured: true,
-
-    completionDate: "2025",
-
-    duration: "1 Month",
-
-    role: "Full Stack Developer",
-    stack: "Frontend",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-
-    features: [
-      "Multiplayer",
-      "Authentication",
-      "Leaderboard",
-      "Game History",
-      "Dark Mode",
-    ],
-
-    challenges: ["Real-time synchronization", "State management"],
-
-    solutions: ["Socket.io implementation", "Optimized game architecture"],
-
-    outcomes: ["Smooth multiplayer gameplay", "Scalable architecture"],
-
-    liveUrl: "",
-    githubUrl: "",
-
-    seoTitle: "MERN Tic Tac Toe",
-    seoDescription: "Real-time multiplayer Tic Tac Toe game.",
+    seoTitle: "Frenzone Social Platform",
+    seoDescription:
+      "A social networking platform built with modern web technologies.",
   },
 
   {
     id: "3",
-
-    slug: "warranty-claim-management",
-
-    title: "Warranty Claim Management System",
-
-    tagline: "Streamlined product warranty handling.",
-
-    shortDescription: "Digital warranty claim processing platform.",
-
+    slug: "camroses",
+    title: "Camroses",
+    tagline: "Creative media and branding platform.",
+    shortDescription:
+      "A creative platform for showcasing media, branding, and digital content services.",
     overview:
-      "A system for submitting, tracking, and managing product warranty claims.",
-
-    thumbnail: "/projects/warranty/thumb.webp",
-
-    coverImage: "/projects/warranty/cover.webp",
-
-    gallery: [],
-
-    category: "Management System",
-
-    featured: true,
-
+      "Camroses is a media-focused web platform designed for showcasing creative work and branding services.",
+    thumbnail: "/portfolio/camroses.png",
+    coverImage: "/portfolio/camroses.png",
+    gallery: ["/portfolio/camroses.png"],
+    category: "Creative Agency",
+    featured: false,
     completionDate: "2025",
-
-    duration: "2 Months",
-    stack: "Frontend",
+    duration: "1.5 Months",
     role: "Frontend Developer",
-
-    technologies: ["Next.js", "TypeScript", "Formik", "Yup", "Redux Toolkit"],
-
-    features: [
-      "Claim Submission",
-      "Tracking System",
-      "Validation",
-      "Admin Dashboard",
-    ],
-
-    challenges: ["Complex form validation", "User experience optimization"],
-
-    solutions: ["Formik integration", "Reusable form components"],
-
-    outcomes: ["Faster claim processing", "Reduced paperwork"],
-
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    stack: "Frontend",
+    features: ["Portfolio Showcase", "Service Pages", "Responsive Design"],
+    challenges: ["Pixel-perfect UI design"],
+    solutions: ["Reusable UI components"],
+    outcomes: ["Professional brand presentation"],
     liveUrl: "",
     githubUrl: "",
-
-    seoTitle: "Warranty Claim System",
-    seoDescription: "Digital warranty management application.",
+    seoTitle: "Camroses Creative Platform",
+    seoDescription: "A creative branding and media showcase platform.",
   },
 
   {
     id: "4",
-
-    slug: "multi-level-dashboard",
-
-    title: "Multi-Level Dashboard",
-
-    tagline: "Enterprise-grade nested dashboard architecture.",
-
+    slug: "devsaim",
+    title: "Devsaim",
+    tagline: "Developer portfolio and service platform.",
     shortDescription:
-      "Fully responsive dashboard with dynamic nested navigation.",
-
+      "A developer-focused portfolio and service showcase website.",
     overview:
-      "Complex dashboard architecture supporting multiple sections and dynamic sidebars.",
-
-    thumbnail: "/projects/dashboard/thumb.webp",
-
-    coverImage: "/projects/dashboard/cover.webp",
-
-    gallery: [],
-
-    category: "Dashboard",
-
-    featured: true,
-
+      "Devsaim is a personal/developer branding platform to showcase skills, projects, and services.",
+    thumbnail: "/portfolio/devsaim.png",
+    coverImage: "/portfolio/devsaim.png",
+    gallery: ["/portfolio/devsaim.png"],
+    category: "Portfolio",
+    featured: false,
     completionDate: "2025",
-
-    duration: "2 Months",
-
+    duration: "1 Month",
     role: "Frontend Developer",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     stack: "Frontend",
-
-    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
-
-    features: [
-      "Nested Navigation",
-      "Role-based Access",
-      "Responsive Design",
-      "Reusable Components",
-    ],
-
-    challenges: ["Scalable navigation architecture"],
-
-    solutions: ["Dynamic sidebar system"],
-
-    outcomes: ["Improved maintainability", "Better user navigation"],
-
+    features: ["Project Showcase", "Service Listing", "Contact Form"],
+    challenges: ["UI structure consistency"],
+    solutions: ["Component-based architecture"],
+    outcomes: ["Improved personal branding"],
     liveUrl: "",
     githubUrl: "",
+    seoTitle: "Devsaim Portfolio",
+    seoDescription: "Developer portfolio and service showcase website.",
+  },
 
-    seoTitle: "Enterprise Dashboard",
-    seoDescription: "Advanced multi-level dashboard architecture.",
+  {
+    id: "5",
+    slug: "sonex-ai",
+    title: "Sonex AI",
+    tagline: "AI-powered automation assistant.",
+    shortDescription:
+      "AI assistant platform for automating tasks and generating content.",
+    overview:
+      "Sonex AI is an AI-driven platform that helps users generate content and automate workflows using AI models.",
+    thumbnail: "/portfolio/sonex.png",
+    coverImage: "/portfolio/sonex.png",
+    gallery: ["/portfolio/sonex.png"],
+    category: "AI Application",
+    featured: true,
+    completionDate: "2026",
+    duration: "3 Months",
+    role: "Full Stack Developer",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "OpenAI",
+      "Node.js",
+      "Tailwind CSS",
+    ],
+    stack: "Full Stack",
+    features: [
+      "AI Chat Assistant",
+      "Content Generation",
+      "Workflow Automation",
+    ],
+    challenges: ["Prompt optimization", "API cost management"],
+    solutions: ["Caching responses", "Efficient prompt structuring"],
+    outcomes: ["Faster content creation"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Sonex AI Platform",
+    seoDescription: "AI-powered automation and content generation platform.",
+  },
+
+  {
+    id: "6",
+    slug: "social-buddy",
+    title: "Social Buddy",
+    tagline: "Social media management assistant.",
+    shortDescription:
+      "Tool to help users manage and optimize social media presence.",
+    overview:
+      "Social Buddy helps users schedule posts, track engagement, and manage multiple social accounts.",
+    thumbnail: "/portfolio/socialbuddy.png",
+    coverImage: "/portfolio/socialbuddy.png",
+    gallery: ["/portfolio/socialbuddy.png"],
+    category: "SaaS",
+    featured: false,
+    completionDate: "2025",
+    duration: "2 Months",
+    role: "Full Stack Developer",
+    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "Node.js"],
+    stack: "Full Stack",
+    features: [
+      "Post Scheduling",
+      "Analytics Tracking",
+      "Multi Account Support",
+    ],
+    challenges: ["API rate limits"],
+    solutions: ["Queue-based scheduling system"],
+    outcomes: ["Better social media efficiency"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Social Buddy",
+    seoDescription: "Social media management and scheduling assistant.",
+  },
+
+  {
+    id: "7",
+    slug: "nickfinder",
+    title: "Nickfinder",
+    tagline: "Username and nickname generator tool.",
+    shortDescription:
+      "Tool for generating stylish usernames and gaming nicknames.",
+    overview:
+      "Nickfinder is a utility web app that generates unique usernames with symbols and styles.",
+    thumbnail: "/portfolio/nickfinder.png",
+    coverImage: "/portfolio/nickfinder.png",
+    gallery: ["/portfolio/nickfinder.png"],
+    category: "Utility Tool",
+    featured: false,
+    completionDate: "2025",
+    duration: "1 Month",
+    role: "Frontend Developer",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    stack: "Frontend",
+    features: ["Username Generator", "Symbol Styles", "Copy to Clipboard"],
+    challenges: ["Unicode symbol handling"],
+    solutions: ["Predefined symbol mapping system"],
+    outcomes: ["High user engagement"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Nickfinder Tool",
+    seoDescription: "Generate stylish usernames and gaming nicknames.",
+  },
+
+  {
+    id: "8",
+    slug: "car-rental-system",
+    title: "Car Rental System",
+    tagline: "Online car booking and rental management system.",
+    shortDescription:
+      "A system for browsing, booking, and managing car rentals.",
+    overview:
+      "A full-stack car rental system allowing users to book vehicles, manage reservations, and generate invoices.",
+    thumbnail: "/portfolio/carrental.png",
+    coverImage: "/portfolio/carrental.png",
+    gallery: ["/portfolio/carrental.png"],
+    category: "Web Application",
+    featured: true,
+    completionDate: "2025",
+    duration: "2 Months",
+    role: "Full Stack Developer",
+    technologies: ["C#", ".NET", "SQL Server", "WinForms (or Web variant)"],
+    stack: "Full Stack",
+    features: ["Car Listings", "Booking System", "Receipt Generation"],
+    challenges: ["Booking conflict handling"],
+    solutions: ["Availability validation logic"],
+    outcomes: ["Automated rental management"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Car Rental System",
+    seoDescription: "Car booking and rental management system.",
+  },
+
+  {
+    id: "9",
+    slug: "dental-clinic-management",
+    title: "Dental Clinic Management System",
+    tagline: "Clinic appointment and patient management system.",
+    shortDescription:
+      "System for managing dental clinic patients, appointments, and records.",
+    overview:
+      "A desktop/web-based system to manage patient records, appointments, and clinic workflows.",
+    thumbnail: "/portfolio/dental.png",
+    coverImage: "/portfolio/dental.png",
+    gallery: ["/portfolio/dental.png"],
+    category: "For Brands",
+    featured: false,
+    completionDate: "2025",
+    duration: "2 Months",
+    role: "Full Stack Developer",
+    technologies: ["C#", ".NET", "SQL Server"],
+    stack: "Full Stack",
+    features: ["Patient Records", "Appointment Scheduling", "Billing System"],
+    challenges: ["Data organization for patients"],
+    solutions: ["Relational database design"],
+    outcomes: ["Improved clinic workflow"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Dental Clinic System",
+    seoDescription: "Clinic management system for dental practices.",
+  },
+
+  {
+    id: "10",
+    slug: "resume-builder",
+    title: "Resume Builder",
+    tagline: "AI-assisted resume creation tool.",
+    shortDescription:
+      "A tool for creating professional resumes with templates and AI suggestions.",
+    overview:
+      "Resume Builder helps users generate professional resumes with editable templates and AI-powered suggestions.",
+    thumbnail: "/portfolio/resume.png",
+    coverImage: "/portfolio/resume.png",
+    gallery: ["/portfolio/resume.png"],
+    category: "Utility Tool",
+    featured: true,
+    completionDate: "2026",
+    duration: "1.5 Months",
+    role: "Full Stack Developer",
+    technologies: ["Next.js", "TypeScript", "OpenAI", "Tailwind CSS"],
+    stack: "Full Stack",
+    features: ["Resume Templates", "AI Suggestions", "PDF Export"],
+    challenges: ["Dynamic resume rendering"],
+    solutions: ["Component-based template system"],
+    outcomes: ["Faster resume creation process"],
+    liveUrl: "",
+    githubUrl: "",
+    seoTitle: "Resume Builder",
+    seoDescription: "AI-powered resume creation tool with templates.",
   },
 ];

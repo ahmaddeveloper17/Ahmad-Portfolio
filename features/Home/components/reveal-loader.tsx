@@ -41,8 +41,8 @@ interface RevealLoaderProps {
 const RevealLoader = ({
   text = "VENGEANCE",
   textSize = "95px",
-  textColor = "black",
-  bgColors = ["#939393"],
+  textColor = "white",
+  bgColors = ["#000"],
   angle = 0,
   staggerOrder = "left-to-right",
   movementDirection = "top-down",
@@ -59,7 +59,6 @@ const RevealLoader = ({
       backgroundImage: `linear-gradient(${angle}deg, ${bgColors.join(", ")})`,
     };
   };
-
   const getStaggerFrom = (type: StaggerType): string | number => {
     switch (type) {
       case "right-to-left":
@@ -135,18 +134,14 @@ const RevealLoader = ({
 
   return (
     <div
-      className={cn(
-        "absolute inset-0 z-50 flex overflow-hidden bg-transparent",
-        className,
-      )}
+      className={cn("absolute inset-0 z-50 flex overflow-hidden", className)}
       ref={preloaderRef}
     >
       {[...Array(10)].map((_, i) => (
         <div
           key={i}
-          className="preloader-item h-full w-[10%] "
-          style={getBackgroundStyle()}
-        ></div>
+          className="preloader-item relative h-full w-[12%] bg-white/5 "
+        />
       ))}
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

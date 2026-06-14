@@ -17,6 +17,8 @@ import SocialFlipButton from "@/features/Home/components/social-flip-button";
 
 import Particles from "@/features/Portfolio/components/Particles";
 import LightRays from "@/features/Home/components/LightRays";
+import RotatingText from "../../../components/RotatingText";
+import InfiniteMenu from "@/components/InfiniteMenu";
 
 export default function HomePageView() {
   const handleAnimationComplete = () => {
@@ -76,11 +78,35 @@ export default function HomePageView() {
       onClick: () => alert("Profile!"),
     },
   ];
+  const menuItems = [
+    {
+      image: "/home/re.png",
+      link: "https://google.com/",
+    },
+    {
+      image: "/home/node.png",
+      link: "https://google.com/",
+    },
+
+    {
+      image: "/home/db.png",
+      link: "https://google.com/",
+    },
+    {
+      image: "/home/next.png",
+      link: "https://google.com/",
+    },
+
+    {
+      image: "/home/gpt.png",
+      link: "https://google.com/",
+    },
+  ];
 
   return (
     <div className="relative w-screen h-screen overflow-x-hidden ">
       {/* Background Lines with full interaction */}
-      <div className="fixed inset-0 z-30 opacity-80 pointer-events-none">
+      <div className="fixed inset-0 z-10 opacity-80 pointer-events-none">
         <LightRays
           raysOrigin="top-center"
           raysColor="#ffffff"
@@ -95,7 +121,7 @@ export default function HomePageView() {
           saturation={1}
         />
       </div>
-      <div className="absolute inset-0 z-20 opacity-80 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
         <Particles
           particleColors={["#ffffff"]}
           particleCount={200}
@@ -108,49 +134,57 @@ export default function HomePageView() {
         />
       </div>
 
-      {/* Centered Text */}
-      <div className=" lg:mt-30 xl:mt-40 inset-0 z-999 flex flex-col items-center justify-center gap-4 pointer-events-none">
-        <SplitText
-          text="I'm, Ahmad!"
-          className="text-3xl md:text-5xl  text-white text-center"
-          delay={50}
-          duration={2}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-        <div className=" text-white font-[Stack_Sans_Notch] ">
-          <TrueFocus
-            sentence="Full Stack Developer"
-            manualMode={false}
-            blurAmount={4}
-            borderColor="#eee"
-            animationDuration={0.5}
-            glowColor="rgba(0, 255, 0, 0.6)"
-            pauseBetweenAnimations={1}
+      <main className=" lg:mt-10 flex  items-center justify-between max-w-6xl  mx-auto h-full ">
+        <section>
+          <SplitText
+            text="I'm, Ahmad Mujatba!"
+            className="text-3xl md:text-5xl font-[Stack_Sans_Notch] py-2 text-white text-center"
+            delay={50}
+            duration={2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
           />
-        </div>
+          <div className=" text-white py-2 text-xl md:text-3xl font-[Stack_Sans_Notch] flex items-center gap-2">
+            <p className="">Doing as</p>
+            <RotatingText
+              texts={["Frontend", "Backend", "DevOps", "SEO Expert"]}
+              mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-black overflow-hidden  sm:py-1  justify-center rounded-lg"
+              staggerFrom="last"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+              splitBy="characters"
+              auto
+              loop
+            />
+          </div>
 
-        <div className=" text-white relative pointer-events-auto ">
-          <GlassIcons items={items} className="custom-class" />
-        </div>
-        <p className=" text-base tracking-tight  text-white text-center w-120">
-          A Full Stack Developer specializing in MERN Stack, Next.js,
-          TypeScript, and modern web applications. I help businesses build
-          scalable, high-performance digital products.
-        </p>
-        <div className=" mt-4   pointer-events-auto">
-          <SocialFlipButton
-            items={dockItems}
-            frontClassName=" border-white border "
-          />
-        </div>
-      </div>
+          <div className=" text-white relative py-2 pointer-events-auto ">
+            <GlassIcons items={items} className="custom-class" />
+          </div>
+          <p className=" text-base tracking-tight  text-white w-120">
+            A Full Stack Developer specializing in MERN Stack, Next.js,
+            TypeScript, and modern web applications. I help businesses build
+            scalable, high-performance digital products.
+          </p>
+          <div className=" mt-7   pointer-events-auto">
+            <SocialFlipButton items={dockItems} frontClassName=" border-none" />
+          </div>
+        </section>
+        <section className=" h-100 w-[55%]  z-50">
+          <InfiniteMenu items={menuItems} scale={1.1} />
+        </section>
+      </main>
     </div>
   );
 }

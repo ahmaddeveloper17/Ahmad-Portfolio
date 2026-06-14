@@ -20,7 +20,7 @@ export default function HomeLayoutWrapper({
 
   if (loading)
     return (
-      <div className="fixed inset-0 z-9998 flex items-center justify-center ">
+      <div className="fixed inset-0 z-9998 flex items-center justify-center bg-black/50 backdrop-blur-md">
         <RevealLoader
           text="Ready To Explore?"
           staggerOrder="left-to-right"

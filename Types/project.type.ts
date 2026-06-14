@@ -19,6 +19,10 @@ export interface Project {
     | "Dashboard"
     | "SaaS"
     | "AI Application"
+    | "Creative Agency"
+    | "Utility Tool"
+    | "Portfolio"
+    | "For Brands"
     | "Management System";
 
   featured: boolean;

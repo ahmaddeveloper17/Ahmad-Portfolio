@@ -154,9 +154,9 @@ export default function SocialFlipButton({
   }, []);
 
   return (
-    <div className={cn("flex items-center justify-center gap-4 ", className)}>
+    <div className={cn("flex items-center gap-4 ", className)}>
       <div
-        className="group relative flex items-center justify-center gap-4 rounded-2xl glass-border bg-transparent border-2 border-white p-3 px-8 shadow-sm dark:bg-white"
+        className="group relative flex items-center justify-start gap-4 rounded-2xl glass-border bg-transparent   shadow-sm dark:bg-white"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => {
           setIsHovered(false);

@@ -20,7 +20,7 @@ export default function PortfolioLayoutWrapper({
 
   if (loading)
     return (
-      <div className="fixed inset-0 z-9998 flex items-center justify-center ">
+      <div className="fixed inset-0 z-9998 flex items-center justify-center bg-black/50 backdrop-blur-md">
         <RevealLoader
           text="Portfolio!"
           staggerOrder="left-to-right"

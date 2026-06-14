@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Black_Ops_One, Nunito, Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/UI/Navbar";
-import SplashCursor from "@/components/SplashCursor";
+import Navbar from "@/components/Navbar";
 
 const nunito = Nunito({
   variable: "--font-nunito",

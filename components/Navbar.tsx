@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className="sticky top-2  mx-auto mt-2 flex items-center justify-between 
+      className="sticky top-2 font-[Stack_Sans_Notch] mx-auto mt-2 flex items-center justify-between 
 lg:w-max md:justify-center
-border border-slate-700 px-10 py-4 text-white
+border shadow-primary border-slate-700 px-10 py-4 text-white
 bg-secondary/10 backdrop-blur-md rounded-full
 text-sm
 hover:shadow-[0px_0px_22px_2px] shadow-[0px_0px_15px_1px]
@@ -37,12 +37,12 @@ transition-all duration-500"
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-8 mt-2 ml-7 text-white">
+      <div className="hidden md:flex font-[Stack_Sans_Notch] items-center gap-8 mt-2 ml-7 text-white">
         {menuItems.map((item) => (
           <Link
             key={item.name}
             href={item.url}
-            className="relative overflow-hidden h-6 group"
+            className="relative overflow-hidden h-5 group"
           >
             <span className="block transition-transform duration-300 group-hover:-translate-y-full">
               {item.name}

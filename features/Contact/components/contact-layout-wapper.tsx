@@ -20,7 +20,7 @@ export default function ContactLayoutWrapper({
 
   if (loading)
     return (
-      <div className="fixed inset-0 z-9999 flex items-center justify-center ">
+      <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/50 backdrop-blur-md">
         <RevealLoader
           text="Feel Free To Contact!"
           staggerOrder="left-to-right"
