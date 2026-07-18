@@ -39,9 +39,9 @@ const CONTACT_METHODS = [
 ];
 
 const SOCIALS = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/ahmadmujtaba" },
+  { icon: Twitter, label: "Twitter", href: "https://twitter.com/ahmadmujtaba" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/ahmadmujtaba" },
 ];
 
 const SERVICES = [
@@ -77,7 +77,7 @@ export default function ContactPageView() {
   return (
     <>
       {" "}
-      <main className="relative w-screen h-screen overflow-auto">
+      <main className="relative w-screen min-h-screen pt-16 md:pt-20">
         <div className="fixed inset-0 -z-10 opacity-60 pointer-events-none">
           <Particles
             particleColors={["#ffffff"]}
@@ -91,21 +91,21 @@ export default function ContactPageView() {
           />
         </div>
 
-        <div className="relative w-full py-24 max-w-6xl xl:max-w-7xl mx-auto">
-          <div className="mb-20 flex  lg:mt-20 flex-col items-center text-center">
-            <HeadingTitle title="Contact Me" lineWidthClassName="w-38" />
+        <div className="relative w-full py-16 md:py-24 max-w-6xl xl:max-w-7xl mx-auto">
+          <div className="mb-10 md:mb-20 flex flex-col items-center text-center px-4">
+            <HeadingTitle title="Contact Me" lineWidthClassName="w-36" />
 
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
+            <p className="mt-4 max-w-xl text-sm md:text-base leading-relaxed text-zinc-500">
               Whether you have a project in mind, a question, or just want to
               connect!
             </p>
           </div>
-          <section className=" flex flex-col md:flex-row justify-between items-start">
+          <section className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8 px-4 md:px-0">
             {/* ── LEFT COLUMN ────────────────────────────────────────────────────── */}
-            <div className="flex flex-col gap-10  lg:w-[47%]">
+            <div className="flex flex-col gap-8 md:gap-10 w-full md:w-[47%]">
               {/* headline */}
               <div>
-                <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] tracking-tight text-white lg:text-6xl">
                   Let&rsquo;s build{" "}
                   <span
                     className="bg-clip-text font-[Stack_Sans_Notch] text-transparent"
@@ -203,7 +203,7 @@ export default function ContactPageView() {
             </div>
 
             {/* form  */}
-            <div className="relative max-w-120">
+            <div className="relative w-full md:max-w-lg">
               <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg">
                 <div className="p-7 lg:p-10">
                   {submitted ? (
@@ -315,6 +315,7 @@ export default function ContactPageView() {
           100% { background-position: 200% 0; }
         }
       `}</style>
+        <div className="pb-16 md:pb-20" />
       </main>
     </>
   );

@@ -71,7 +71,7 @@ export default function PortfolioView() {
   const hasFilters = total > 0;
 
   return (
-    <div className="relative w-screen h-screen overflow-auto">
+    <div className="relative w-screen min-h-screen pt-16 md:pt-20">
       <div className="fixed inset-0 -z-10 opacity-60 pointer-events-none">
         <Particles
           particleColors={["#ffffff"]}
@@ -85,17 +85,19 @@ export default function PortfolioView() {
         />
       </div>
 
-      <div className="mb-20 flex mt-20  lg:mt-40 flex-col items-center text-center">
-        <HeadingTitle title="Projects" lineWidthClassName="w-32" />
+      <div className="w-full py-16 md:p-24 max-w-6xl xl:max-w-7xl mx-auto">
+        <div className="mb-8 md:mb-2 flex flex-col items-center text-center px-4">
+          <HeadingTitle title="Projects" lineWidthClassName="w-32" />
 
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
-          A List of my personal and professional projects, showcasing my skills
-          and experience in various domains.
-        </p>
+          <p className="mt-4 max-w-xl text-sm md:text-base leading-relaxed text-zinc-500">
+            A List of my personal and professional projects, showcasing my
+            skills and experience in various domains.
+          </p>
+        </div>
       </div>
-      <div className=" inset-0 z-50 flex flex-col items-start gap-6 relative w-full max-w-6xl xl:max-w-7xl mx-auto">
-        <div className="w-full flex justify-between items-center">
-          <div className="mb-2 flex items-center justify-between">
+      <div className="inset-0 z-50 flex flex-col items-start gap-4 md:gap-6 relative w-full max-w-6xl xl:max-w-7xl mx-auto px-4 md:px-0">
+        <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
+          <div className="flex items-center justify-between w-full sm:w-auto">
             <div className="flex items-center gap-2.5">
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 border border-white/8">
                 <SlidersHorizontal size={13} className="text-zinc-400" />
@@ -126,7 +128,7 @@ export default function PortfolioView() {
           </div>
 
           {/* Filters row */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1.5 md:gap-2">
             <FilterDropdown
               label="Category"
               options={CATEGORIES}
@@ -176,10 +178,10 @@ export default function PortfolioView() {
             </button>
           </div>
         </div>
-        <div className=" my-1">
+        <div className="my-1">
           {/* Active filter chips */}
           {hasFilters && (
-            <div className=" flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 md:gap-2">
               {filters.categories.map((c) => (
                 <Badge
                   key={c}
@@ -263,6 +265,7 @@ export default function PortfolioView() {
             </button>
           </div>
         )}
+        <div className="pb-16 md:pb-20" />
       </div>
     </div>
   );

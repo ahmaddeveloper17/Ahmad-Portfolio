@@ -14,7 +14,7 @@ export default function ExperiencePageView() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   return (
-    <main className=" w-screen h-screen ">
+    <main className="w-screen min-h-screen pt-16 md:pt-20">
       <div className="fixed inset-0 -z-10 opacity-60 pointer-events-none">
         <Particles
           particleColors={["#ffffff"]}
@@ -27,10 +27,10 @@ export default function ExperiencePageView() {
           pixelRatio={1}
         />
       </div>
-      <section className="relative w-full py-24 max-w-6xl xl:max-w-7xl mx-auto">
+      <section className="relative w-full py-16 md:py-24 max-w-6xl xl:max-w-7xl mx-auto px-4 md:px-0">
         {/* header */}
-        <div className="mb-20 flex  lg:mt-20 flex-col items-center text-center">
-          <HeadingTitle title="Work Experience" lineWidthClassName="w-38" />
+        <div className="mb-10 md:mb-20 flex flex-col items-center text-center">
+          <HeadingTitle title="Work Experience" lineWidthClassName="w-36" />
 
           <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-500">
             A timeline of the roles and companies that shaped how I build.
@@ -86,6 +86,7 @@ export default function ExperiencePageView() {
           transform: translateX(0);
         }
       `}</style>
+      <div className="pb-16 md:pb-20" />
       </section>
     </main>
   );

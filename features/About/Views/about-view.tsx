@@ -12,6 +12,9 @@ import {
 import { TechsLogoLoop } from "../components/LogoLoop";
 import SoftAurora from "../components/SoftAurora";
 import MoreAboutMe from "../components/MoreAboutMe";
+import Services from "../components/Services";
+import Philosophy from "../components/Philosophy";
+import FunFacts from "../components/FunFacts";
 import HeadingTitle from "@/components/Heading";
 
 const dockItems = [
@@ -24,7 +27,7 @@ const dockItems = [
 
 export default function AboutPageView() {
   return (
-    <div className="relative w-screen h-screen overflow-auto">
+    <div className="relative w-screen min-h-screen pt-16 md:pt-20">
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10 opacity-60 pointer-events-none">
         <SoftAurora
@@ -44,21 +47,22 @@ export default function AboutPageView() {
           mouseInfluence={0.25}
         />
       </div>
-      <div className="mb-20 flex lg:mt-25 xl:mt-40 flex-col items-center  text-center">
-        <HeadingTitle title="About Me" lineWidthClassName="w-32" />
+      <div className="w-full py-16 md:py-24 max-w-6xl xl:max-w-7xl mx-auto">
+        <div className="mb-10 md:mb-2 flex flex-col items-center text-center px-4">
+          <HeadingTitle title="About Me" lineWidthClassName="w-32" />
 
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-          A brief introduction about myself, my background, and what drives me
-          as
-        </p>
+          <p className="mt-4 max-w-xl text-sm md:text-base leading-relaxed text-muted-foreground">
+            A brief introduction about myself, my background, and what drives me
+          </p>
+        </div>
       </div>
 
       {/* MAIN CONTENT */}
       <main className="relative z-10 flex flex-col max-w-6xl xl:max-w-7xl mx-auto">
-        <section className="w-full flex justify-center px-4  ">
-          <div className="w-full  flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
+        <section className="w-full flex justify-center px-4">
+          <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 md:gap-12">
             {/* LEFT CONTENT */}
-            <div className="flex flex-col gap-4 max-w-xl">
+            <div className="flex flex-col gap-4 max-w-xl text-center lg:text-left">
               <HeadingTitle title="Ahmad Mujtaba" />
               <p className="text-white font-semibold text-lg">
                 MERN Developer | DevOps | Next JS | OpenAI | SaaS
@@ -75,19 +79,10 @@ export default function AboutPageView() {
               </p>
 
               {/* BUTTONS */}
-              <div className="flex flex-wrap gap-4 mt-4">
+              <div className="flex flex-wrap gap-4 mt-4 justify-center lg:justify-start">
                 {/* Primary CTA */}
                 <button
-                  className="
-      px-5 py-2
-      rounded-lg
-      font-medium
-      text-[#0A0F1C]
-      transition-all
-      duration-300
-      hover:scale-105
-      
-    "
+                  className="px-5 py-2 rounded-lg font-medium text-[#0A0F1C] transition-all duration-300 hover:scale-105"
                   style={{
                     background:
                       "linear-gradient(135deg,#66FCF1 0%, #45A29E 100%)",
@@ -97,28 +92,13 @@ export default function AboutPageView() {
                 </button>
 
                 {/* Secondary CTA */}
-                <button
-                  className="
-         px-5 py-2
-      rounded-lg
-      font-medium
-      border
-      border-[#66FCF1]/50
-      text-[#66FCF1]
-      bg-transparent
-      transition-all
-      duration-300
-      hover:bg-[#66FCF1]/10
-      hover:border-[#66FCF1]
-     
-    "
-                >
+                <button className="px-5 py-2 rounded-lg font-medium border border-[#66FCF1]/50 text-[#66FCF1] bg-transparent transition-all duration-300 hover:bg-[#66FCF1]/10 hover:border-[#66FCF1]">
                   Resume
                 </button>
               </div>
 
               {/* SOCIAL */}
-              <div className="flex gap-3 mt-5">
+              <div className="flex gap-3 mt-5 justify-center lg:justify-start">
                 {dockItems.map((item, i) => (
                   <div
                     key={i}
@@ -152,8 +132,20 @@ export default function AboutPageView() {
           <MoreAboutMe />
         </section>
 
-        <section className="mt-20">
-          <HeadingTitle title="Technologies" lineWidthClassName="w-35" />
+        <section className="mt-20 px-4">
+          <Services />
+        </section>
+
+        <section className="mt-20 px-4">
+          <Philosophy />
+        </section>
+
+        <section className="mt-20 px-4">
+          <FunFacts />
+        </section>
+
+        <section className="mt-20 pb-16 md:pb-20">
+          <HeadingTitle title="Technologies" lineWidthClassName="w-36" />
           <TechsLogoLoop />
         </section>
       </main>

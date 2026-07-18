@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className="sticky top-2 font-[Stack_Sans_Notch] mx-auto mt-2 flex items-center justify-between 
+      className="sticky top-2 font-[Stack_Sans_Notch] mx-2 md:mx-auto mt-2 flex items-center justify-between 
 lg:w-max md:justify-center
-border shadow-primary border-slate-700 px-10 py-4 text-white
+border shadow-primary border-slate-700 px-5 sm:px-10 py-4 text-white
 bg-secondary/10 backdrop-blur-md rounded-full
 text-sm
 hover:shadow-[0px_0px_22px_2px] shadow-[0px_0px_15px_1px]
@@ -92,7 +92,7 @@ transition-all duration-500"
           {menuItems.map((item) => (
             <Link
               key={item.name}
-              href="#"
+              href={item.url}
               className="hover:text-indigo-600"
               onClick={closeMenu}
             >

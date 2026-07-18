@@ -19,11 +19,12 @@ import Particles from "@/features/Portfolio/components/Particles";
 import LightRays from "@/features/Home/components/LightRays";
 import RotatingText from "../../../components/RotatingText";
 import InfiniteMenu from "@/components/InfiniteMenu";
+import StatsBar from "@/features/Home/components/StatsBar";
+import FeaturedProjects from "@/features/Home/components/FeaturedProjects";
+import CTABanner from "@/features/Home/components/CTABanner";
 
 export default function HomePageView() {
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
+  const handleAnimationComplete = () => {};
   const items = [
     {
       icon: <SiMongodb className="text-white text-2xl" />,
@@ -104,7 +105,7 @@ export default function HomePageView() {
   ];
 
   return (
-    <div className="relative w-screen h-screen overflow-x-hidden ">
+    <div className="relative w-screen overflow-x-hidden">
       {/* Background Lines with full interaction */}
       <div className="fixed inset-0 z-10 opacity-80 pointer-events-none">
         <LightRays
@@ -121,7 +122,7 @@ export default function HomePageView() {
           saturation={1}
         />
       </div>
-      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
+      <div className="fixed inset-0 z-0 opacity-80 pointer-events-none">
         <Particles
           particleColors={["#ffffff"]}
           particleCount={200}
@@ -134,11 +135,12 @@ export default function HomePageView() {
         />
       </div>
 
-      <main className=" lg:mt-10 flex  items-center justify-between max-w-6xl  mx-auto h-full ">
-        <section>
+      {/* Hero Section */}
+      <section className="relative z-10 min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between max-w-6xl mx-auto px-4 lg:px-0 pt-24 l pb-12 lg:pb-0">
+        <div className="w-full lg:w-auto px-2 lg:px-0">
           <SplitText
             text="I'm, Ahmad Mujatba!"
-            className="text-3xl md:text-5xl font-[Stack_Sans_Notch] py-2 text-white text-center"
+            className="text-2xl sm:text-3xl md:text-5xl font-[Stack_Sans_Notch] py-2 text-white text-center lg:text-left"
             delay={50}
             duration={2}
             ease="power3.out"
@@ -150,11 +152,11 @@ export default function HomePageView() {
             textAlign="center"
             onLetterAnimationComplete={handleAnimationComplete}
           />
-          <div className=" text-white py-2 text-xl md:text-3xl font-[Stack_Sans_Notch] flex items-center gap-2">
-            <p className="">Doing as</p>
+          <div className="text-white py-2 text-lg sm:text-xl md:text-3xl font-[Stack_Sans_Notch] flex items-center gap-2 justify-center lg:justify-start">
+            <p>Doing as</p>
             <RotatingText
               texts={["Frontend", "Backend", "DevOps", "SEO Expert"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-black overflow-hidden  sm:py-1  justify-center rounded-lg"
+              mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-black overflow-hidden sm:py-1 justify-center rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -169,22 +171,37 @@ export default function HomePageView() {
             />
           </div>
 
-          <div className=" text-white relative py-2 pointer-events-auto ">
+          <div className="text-white relative py-2 pointer-events-auto flex justify-center lg:justify-start">
             <GlassIcons items={items} className="custom-class" />
           </div>
-          <p className=" text-base tracking-tight  text-white w-120">
+          <p className="text-sm sm:text-base tracking-tight text-white w-full max-w-md lg:max-w-lg text-center lg:text-left">
             A Full Stack Developer specializing in MERN Stack, Next.js,
             TypeScript, and modern web applications. I help businesses build
             scalable, high-performance digital products.
           </p>
-          <div className=" mt-7   pointer-events-auto">
-            <SocialFlipButton items={dockItems} frontClassName=" border-none" />
+          <div className="mt-7 pointer-events-auto flex justify-center lg:justify-start">
+            <SocialFlipButton items={dockItems} frontClassName="border-none" />
           </div>
-        </section>
-        <section className=" h-100 w-[55%]  z-50">
+        </div>
+        <div className="h-80 sm:h-96 lg:h-[30rem] w-full lg:w-[55%] z-50 mt-8 lg:mt-0">
           <InfiniteMenu items={menuItems} scale={1.1} />
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="relative z-10">
+        <StatsBar />
+      </section>
+
+      {/* Featured Projects */}
+      <section className="relative z-10">
+        <FeaturedProjects />
+      </section>
+
+      {/* CTA Banner */}
+      <section className="relative z-10">
+        <CTABanner />
+      </section>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Black_Ops_One, Nunito, Stack_Sans_Notch } from "next/font/google";
+import { Nunito, Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import GameHub from "@/components/game/GameHub";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -32,6 +34,10 @@ export default function HomePageLayout({
         </div>
 
         {children}
+
+        <Footer />
+
+        <GameHub />
       </body>
     </html>
   );

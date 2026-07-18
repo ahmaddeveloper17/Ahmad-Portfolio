@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="card-inner relative overflow-hidden rounded-2xl  bg-white/5 backdrop-blur-md border border-white/6">
         {/* Thumbnail */}
-        <div className="relative h-52 overflow-hidden">
+        <div className="relative h-44 sm:h-52 overflow-hidden">
           <Image
             src={project.thumbnail}
             alt={project.title}
